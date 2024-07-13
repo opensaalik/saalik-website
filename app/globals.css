@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: 'openlipi-lichchhavi';
+    font-style: bold;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/openlipi-lichchhavi-bold) format('ttf');
+  }
+}
+
+u {
+  text-decoration: underline;
+  text-decoration-color: green;
+  text-decoration-thickness: 2px;
+}

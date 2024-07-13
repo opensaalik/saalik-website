@@ -17,6 +17,12 @@ const config: Config = {
     // },
     width: {
       'fit': 'fit-content'
+    },
+
+    theme: {
+      fontFamily: {
+        'openlipi': ['openlipi-lichchhavi', 'sans-serif'],
+      },
     }
 
   },
