@@ -1,4 +1,8 @@
+"use client"
+
+
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 interface NavbarProps {
@@ -8,6 +12,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [bgChange, setBgChange] = useState(false);
+  const path = usePathname();
 
   useEffect(() => {
     const changeBackground = () => {
@@ -23,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
     return () => window.removeEventListener('scroll', changeBackground);
   }, []);
   return (
-    <nav className={`sticky top-0 z-50 transition-colors duration-300 ${bgChange ? 'bg-black/70' : 'bg-transparent'}`}>
+    <nav className={`sticky top-0 z-50 transition-colors duration-300 ${bgChange ? 'bg-black/70' : 'bg-black'}`}>
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-center h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -74,16 +79,19 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <div className="flex-1 flex items-center justify-center sm:items-stretch">
             <div className="hidden sm:block sm:ml-6">
               <div className={`text-black-300 flex space-x-6 ${className}`}>
-                <Link className="hover:bg-green-900 hover:text-white px-5 py-2 rounded-md text-sm font-bold" href="/">
+                <Link className={`hover:bg-green-900 hover:text-white ${path == '/' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/">
                   home
                 </Link>
-                <Link className="hover:bg-green-900 hover:text-white px-5 py-2 rounded-md text-sm font-bold" href="/myths">
+                <Link className={`hover:bg-green-900 hover:text-white ${path == '/about' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/about">
+                  about
+                </Link>
+                <Link className={`hover:bg-green-900 hover:text-white ${path == '/myths' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/myths">
                   myths
                 </Link>
-                <Link className="hover:bg-green-900 hover:text-white px-5 py-2 rounded-md text-sm font-bold" href="/initiatives">
+                <Link className={`hover:bg-green-900 hover:text-white ${path == '/initiatives' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/initiatives">
                   initiatives
                 </Link>
-                <Link className="hover:bg-green-900 hover:text-white px-5 py-2 rounded-md text-sm font-bold" href="/contact">
+                <Link className={`hover:bg-green-900 hover:text-white ${path == '/contact' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/contact">
                   contact us
                 </Link>
               </div>
@@ -96,16 +104,16 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       {isOpen && (
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link className="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/">
+            <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/">
               home
             </Link>
-            <Link className="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/myths">
+            <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/myths">
               myths
             </Link>
-            <Link className="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/initiatives">
+            <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/initiatives">
               initiatives
             </Link>
-            <Link className="text-black-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/contact">
+            <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/contact">
               contact us
             </Link>
           </div>
