@@ -13,12 +13,12 @@ export default function About() {
         <title>SAALIK-About</title>
       </Head>
       <Navbar className="text-white" />
-      < div className="h-lvh" >
+      <div className="h-lvh">
         <div className="bg-black bg-cover h-full w-full">
           <div className="text-white flex justify-center items-center h-screen">
-            <div>
+            <div className="flex flex-col items-center">
               <Title className="text-white" text="SAALIK: Myths are Messages from the Past" />
-              <hr className="h-px w-full my-8 bg-green-800 border-0" />
+              <hr className="h-px md:w-full w-[80%] my-8 bg-green-800 border-0" />
             </div>
           </div>
         </div>
@@ -28,13 +28,13 @@ export default function About() {
           <Title text="What is SAALIK?" />
           <p className="text-justify md:px-20">
             SAALIK is a voluntary initiative by SAALIK TECH PVT. LTD. aiming to preserve Nepal's culture heritage for posterity through technology.
-            Founded by a ground of researchers and developers deeping in love with Nepal and the expression of her people, SAALIK concerns itself with digitization of Nepal's tangible and intangible heritages like sculptures, manuscripts, and writing scripts.
+            Founded by a group of researchers and developers deeping in love with Nepal and the expression of her people, SAALIK concerns itself with digitization of Nepal's tangible and intangible heritages like sculptures, manuscripts, myths, legends, and writing scripts.
           </p>
           <br />
           <p className="text-justify md:px-20">
             SAALIk aims to work with regional bodies—both governmental and non-governmental—for that purpose. We are already in talks with several of Kathmandu district's municipalities, pitching our idea of a digital haven for heritages located within thoese areas.
           </p>
-          <hr className="h-px w-[50%] my-8 bg-green-800 border-0" />
+          <hr className="h-px w-[50%] my-10 bg-green-800 border-0" />
           <Title text="Team" />
           <div className="md:grid md:grid-cols-2">
 
@@ -81,9 +81,13 @@ export default function About() {
             </div>
           </div>
 
+          <hr className="h-px w-[50%] my-10 bg-green-800 border-0" />
+          <div>
+            <Title text="Goals"></Title>
+          </div>
         </div>
-        </div>
-        <Footer />
+      </div>
+      <Footer />
     </>
   );
 }
