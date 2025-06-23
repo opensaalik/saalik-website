@@ -5,6 +5,13 @@ import Title from "../Title";
 import Footer from "../footer";
 {/*import Head from "next/head";
 import Image from "next/image";*/}
+
+import localFont from 'next/font/local';
+
+const openlipi = localFont({
+  src: '../../public/fonts/openlipi-lichchhavi-bold.ttf',
+})
+
 export default function About() {
   return (
     <>
@@ -31,18 +38,18 @@ export default function About() {
           Here are samples of the font:
         </p>
         <div className="m-4 w-[70%] flex flex-col md:flex-row justify-between">
-          <Title text="a" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="b" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="c" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="d" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="e" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
+          <Title text="a" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="b" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="c" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="d" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="e" className={`${openlipi.className} text-9xl md:text-9xl`} />
         </div>
         <div className="m-4 w-[70%] flex flex-col md:flex-row justify-between">
-          <Title text="f" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="g" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="h" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="i" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
-          <Title text="j" className="font-['openlipi-lichchhavi'] text-9xl md:text-9xl" />
+          <Title text="f" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="g" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="h" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="i" className={`${openlipi.className} text-9xl md:text-9xl`} />
+          <Title text="l" className={`${openlipi.className} text-9xl md:text-9xl`} />
         </div>
         {/* <hr className="h-px w-[50%] my-10 bg-green-800 border-0" />*/}
       </div>
