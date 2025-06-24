@@ -54,11 +54,6 @@ export default function Home() {
           </p>
           <br />
           <p>
-            We are united with the fundamental belief that the preservation of our culture is the key to our identity and the key to our future.
-            Our heritage is at great risk of being lost forever. Our mythologies are rarely studied critically, and our sculptures are often neglected.
-            Scholars studying our writing scripts are few. Even fewer work towards their democratization. Historic documents and manuscripts are rotting in the archives. There are no digital scripts available to digitize those documents.
-            <br/>
-            <br/>
             Collaborating with governmental and non-governmental agencies, We are working to ensure that our culture is preserved for future generations.
           </p>
           <div className="self-end mt-3">
@@ -74,7 +69,7 @@ export default function Home() {
           <Story imageSrc="/img/stories/swayambhu.jpg" title="Swayambhu" link="/stories/swayambhu" />
           <Story imageSrc="/img/stories/birupakshya.jpg" title="Birupakshya" link="/stories/birupakshya" />
         </div>
-        <Button name="view all" href="/stories" className="self-center text-white mt-5" />
+        <Button name="view all" href="/myths" className="self-center text-white mt-5" />
       </div>
       <div className="flex flex-col md:flex-row justify-center m-5 p-5 my-10">
         <Image
@@ -127,8 +122,8 @@ export default function Home() {
 
           <div className="flex flex-col items-center border-2 border-green-800 p-5 rounded-md m-5 bg-black text-white">
             <Image src='/img/patan.png' alt="Card Image" height={100} width={100} className='rounded-full' />
-            <Title text="openlipi" />
-            <p className={`mb-5 ${isEncrypt ? `${openlipi.className} text-xl` : "font-inter text-lg"}`}>
+            <Title text="openlipi" className="text-green-600" />
+            <p className={`mb-5 ${isEncrypt ? `lowercase ${openlipi.className} text-xl` : "font-inter text-lg"}`}>
               openlipi is an on-going open-source initiative by Saalik.
               It aims to develop font system for endangered Nepali writing scripts.
               Currently, we're working on the Lichchhavi script (this is a sample of the glyphs that we've completed currently).
@@ -144,7 +139,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center border-2 border-green-800 p-5 rounded-md m-5 bg-black text-white">
             <Image src='/img/patan.png' alt="Card Image" height={100} width={100} className='rounded-full' />
-            <Title text="openabhhilekh" />
+            <Title text="openabhhilekh" className="text-green-600" />
             <p className="mb-5">
               openabhilekh is a project aiming to digitize and archive ancient manuscripts and inscriptions of Nepal.
               This is also includes digitization of the manuscripts archived under the Nepal-German Manuscript Preservation Project.
@@ -178,7 +173,7 @@ export default function Home() {
             <p className="m-2 text-green-800">Nepal Tourism Board</p>
           </div>
           <div className="flex flex-col items-center">
-            <Image src="/img/kgmw6.png" alt="Kageshwori Manohara-6" height={100} width={100} />
+            <Image src="/img/kgmw6.png" alt="Kageshwori Manohara-6" height={130} width={130} />
             <p className="m-2 text-green-800">Kageshwori Manohara-6</p>
           </div>
           <div className="flex flex-col items-center">

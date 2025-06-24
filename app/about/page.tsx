@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>SAALIK-About</title>
+        <title>About | SAALIK</title>
       </Head>
       <Navbar className="text-white" />
       <div className="h-lvh">
