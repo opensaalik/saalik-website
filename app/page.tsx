@@ -24,8 +24,8 @@ export default function Home() {
     <>
       <Navbar className="text-white" />
       <div className="h-lvh">
-        <div className="bg-[url('/img/sculpture.jpg')] bg-cover h-full w-full">
-          <div className="text-white">
+        <div className="bg-[url('/img/sculpture.jpg')] relative bg-cover h-full w-full">
+          <div className="text-white absolute bottom-12 right-24">
             <Button name="Get Started" href="/about" className="text-white" />
           </div>
         </div>

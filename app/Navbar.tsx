@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavbarProps {
   className?: string;
@@ -28,9 +29,9 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
     return () => window.removeEventListener('scroll', changeBackground);
   }, []);
   return (
-    <nav className={`sticky top-0 z-50 transition-colors duration-300 ${bgChange ? 'bg-black/70' : 'bg-black'}`}>
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-center h-16">
+    <nav className={`sticky h-[80px] top-0 z-50 px-16 transition-colors duration-300 bg-black flex items-center justify-between `}>
+    
+    
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <button
@@ -76,28 +77,28 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
               )}
             </button>
           </div>
-          <div className="flex-1 flex items-center justify-center sm:items-stretch">
+          <div className="flex-1 flex py-4 items-center justify-between">
+            <Image src="/img/saalik-logo.png" alt="SAALIK logo" width={70} height={70} />
             <div className="hidden sm:block sm:ml-6">
               <div className={`text-black-300 flex space-x-6 ${className}`}>
-                <Link className={`hover:bg-green-900 hover:text-white ${path == '/' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/">
-                  home
+                <Link className={`hover:text-[#63c963] ${path == '/' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/">
+                  Home
                 </Link>
-                <Link className={`hover:bg-green-900 hover:text-white ${path == '/about' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/about">
-                  about
+                <Link className={`hover:text-[#63c963] ${path == '/about' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/about">
+                  About
                 </Link>
-                <Link className={`hover:bg-green-900 hover:text-white ${path == '/myths' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/myths">
-                  myths
+                <Link className={`hover:text-[#63c963] ${path == '/myths' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/myths">
+                  Myths
                 </Link>
-                <Link className={`hover:bg-green-900 hover:text-white ${path == '/initiatives' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/initiatives">
-                  initiatives
+                <Link className={`hover:text-[#63c963] ${path == '/initiatives' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/initiatives">
+                  Initiatives
                 </Link>
-                <Link className={`hover:bg-green-900 hover:text-white ${path == '/contact' ? "bg-green-900 text-white" : ""} px-5 py-2 rounded-md text-sm font-bold`} href="/contact">
-                  contact us
+                <Link className={`bg-gradient-to-r from-green-500 to-green-700 rounded-full hover:from-green-700 hover:to-green-500  transition duration-800 ease-in-out delay-800 fade-in text-white hover:text-white ${path == '/contact' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 text-sm font-medium`} href="/contact">
+                  Reach Us
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
+       
       </div>
 
       {/* Mobile menu, show/hide based on menu state. */}
