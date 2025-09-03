@@ -6,5 +6,5 @@ This repo contains the frontend architecture and design themes for the saalik or
 npm i
 npm run dev
 ```
-*NOTE: If you face any issues, run npm i --force*
+*NOTE: If you face any issues, run `npm i --force`*
 
