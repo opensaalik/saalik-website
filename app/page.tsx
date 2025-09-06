@@ -125,20 +125,20 @@ export default function Home() {
               <button onClick={changeEncrypt} className={`text-white text-center font-bold border-solid border-2 border-green-500 hover:bg-green-500 hover:text-white rounded-full px-4 py-2 md:w-fit m-5`}>
                 {isEncrypt ? "decrypt" : "encrypt"}
               </button>
-              <Button name="read more" href='/openlipi' className='mt-4 text-white' />
+              <Button name="read more" href='/initiatives#openlipi' className='mt-4 text-white' />
             </div>
           </div>
 
           <div className="flex flex-col items-center border-2 border-green-800 p-5 rounded-md m-5 bg-black text-white">
             <Image src='/img/patan.png' alt="Card Image" height={100} width={100} className='rounded-full' />
-            <Title text="openabhhilekh" />
+            <Title text="openabhilekh" />
             <p className="mb-5">
               openabhilekh is a project aiming to digitize and archive ancient manuscripts and inscriptions of Nepal.
               This is also includes digitization of the manuscripts archived Nepal-German Manuscript Preservation Project.
               Here, 'digitization' means transcribing afforementioned manuscripts and inscriptions and making them available through a web
               interface. Furthermore, we also plan to develop a transliteration software which can convert one script to another---especially from Nepal's endangered scripts to devanagari or English. We plan to achieve this through our other initiative, <u><Link href='/openlipi'>openlipi</Link></u>
             </p>
-            <Button name="read more" href='/openabhilekh' className='mt-4 text-white' />
+            <Button name="read more" href='/initiatives#openabhilekh' className='mt-4 text-white' />
           </div>
         </div>
       </div>
