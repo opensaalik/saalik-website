@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-// import vercel from "/public/saalik500.png";
-// import bg from "/public/sculpture.jpg";
-// import Link from "next/link";
 import Navbar from "./Navbar";
 import Button from "./Button";
 import Title from "./Title";
@@ -10,11 +7,6 @@ import Footer from "./footer";
 import Story from "./Story";
 import { useState } from "react";
 import Link from "next/link";
-import localFont from 'next/font/local';
-
-const openlipi = localFont({
-  src: '../public/fonts/openlipi-lichchhavi-bold.ttf',
-})
 
 export default function Home() {
 
@@ -28,9 +20,9 @@ export default function Home() {
   return (
     <>
       <Navbar className="text-white" />
-      <div className="h-lvh">
-        <div className="bg-[url('/img/sculpture.jpg')] bg-cover h-full w-full">
-          <div className="text-white">
+      <div className="h-[75vh]">
+        <div className="relative bg-cover h-full w-full" style={{ backgroundImage: "url('/img/sculpture.jpg')" }}>
+          <div className="text-white absolute bottom-12 right-24">
             <Button name="Get Started" href="/about" className="text-white" />
           </div>
         </div>
@@ -46,14 +38,14 @@ export default function Home() {
           <Title text="SAALIK: An Initiave" />
           <p className="text-justify">
             SAALIK is a voluntary initiative by SAALIK TECH PVT. LTD. aiming to preserve Nepal's culture heritage for posterity through technology.
-            We're a passionate team of researchers and developers, deeping in love with Nepal and the expression of her people. Our work span digitization of
-            sculptures, manuscripts, and writing scripts to promote the hidden gems of Nepal.
-            We recognize that compiling information is not enough. With that in mind, our mind is working on a
-            travel companion app with the aim of digitizing travel to Nepal's culturally rich heritages: for both
-            international and domestic tourists.
+            We're a passionate team of researchers and developers, deeping in love with Nepal and the expression of her people. Our work span from digitization of
+            sculptures, manuscripts, and writing scripts to promotion of the hidden gems of Nepal thorough a work-in-progress travel app.
           </p>
           <br />
           <p>
+            We are united with the fundamental belief that the preservation of our culture is the key to our identity and the key to our future.
+            Our entire heritage is at great risk of being lost forever. Our mythologies are rarely studied critically, and our sculptures are often neglected.
+            Scholars studying our writing scripts are few and far between; and our manuscripts are often left to rot in the archives.
             Collaborating with governmental and non-governmental agencies, We are working to ensure that our culture is preserved for future generations.
           </p>
           <div className="self-end mt-3">
@@ -69,7 +61,7 @@ export default function Home() {
           <Story imageSrc="/img/stories/swayambhu.jpg" title="Swayambhu" link="/stories/swayambhu" />
           <Story imageSrc="/img/stories/birupakshya.jpg" title="Birupakshya" link="/stories/birupakshya" />
         </div>
-        <Button name="view all" href="/myths" className="self-center text-white mt-5" />
+        <Button name="view all" href="/stories" className="self-center text-white mt-5" />
       </div>
       <div className="flex flex-col md:flex-row justify-center m-5 p-5 my-10">
         <Image
@@ -105,9 +97,9 @@ export default function Home() {
             <b>Sculptures are <u>hard.</u></b>
             <br />
             <br />
-            With the amount of information you need to keep track of to identify any sculpture,
+            With the amount of things you need to keep track of to identify a sculpture,
             <br />
-            it's no wonder that we're notoriously bad at identifying and interpreting them.
+            it's no wonder that we're notoriously bad at identifying and interpreting our own sculptures.
             <br />
             To combat this, SAALIK has been researching <u>AI-powered solutions</u>.
             <br />
@@ -122,8 +114,8 @@ export default function Home() {
 
           <div className="flex flex-col items-center border-2 border-green-800 p-5 rounded-md m-5 bg-black text-white">
             <Image src='/img/patan.png' alt="Card Image" height={100} width={100} className='rounded-full' />
-            <Title text="openlipi" className="text-green-600" />
-            <p className={`mb-5 ${isEncrypt ? `lowercase ${openlipi.className} text-xl` : "font-inter text-lg"}`}>
+            <Title text="openlipi" />
+            <p className={`mb-5 ${isEncrypt ? "font-['openlipi-lichchhavi'] text-xl" : "font-inter text-lg"}`}>
               openlipi is an on-going open-source initiative by Saalik.
               It aims to develop font system for endangered Nepali writing scripts.
               Currently, we're working on the Lichchhavi script (this is a sample of the glyphs that we've completed currently).
@@ -139,12 +131,12 @@ export default function Home() {
 
           <div className="flex flex-col items-center border-2 border-green-800 p-5 rounded-md m-5 bg-black text-white">
             <Image src='/img/patan.png' alt="Card Image" height={100} width={100} className='rounded-full' />
-            <Title text="openabhhilekh" className="text-green-600" />
+            <Title text="openabhhilekh" />
             <p className="mb-5">
               openabhilekh is a project aiming to digitize and archive ancient manuscripts and inscriptions of Nepal.
-              This is also includes digitization of the manuscripts archived under the Nepal-German Manuscript Preservation Project.
+              This is also includes digitization of the manuscripts archived Nepal-German Manuscript Preservation Project.
               Here, 'digitization' means transcribing afforementioned manuscripts and inscriptions and making them available through a web
-              interface. Furthermore, we also plan to develop a transliteration software to convert one script to another---especially from Nepal's endangered scripts to Devanagari or English. We plan to achieve this through our other initiative, <u><Link href='/openlipi'>openlipi</Link></u>
+              interface. Furthermore, we also plan to develop a transliteration software which can convert one script to another---especially from Nepal's endangered scripts to devanagari or English. We plan to achieve this through our other initiative, <u><Link href='/openlipi'>openlipi</Link></u>
             </p>
             <Button name="read more" href='/openabhilekh' className='mt-4 text-white' />
           </div>
@@ -154,26 +146,15 @@ export default function Home() {
         <Title text="Supported By" />
         <div className="flex flex-col md:flex-row items-center justify-around">
           <div className="flex flex-col items-center">
-            <Image src="/img/ugc.jpg" alt="University Grants Commission" height={100} width={100} />
-            <p className="m-2 text-green-800">University Grants Commission </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <Image src="/img/nepal_logo.png" alt="Department of Archeology" height={100} width={100} />
+            <Image src="/img/nepal_logo.png" alt="Department of Archeology" height={120} width={120} />
             <p className="m-2 text-green-800">Department of Archeology </p>
           </div>
           <div className="flex flex-col items-center">
-            <Image src="/img/nepal_logo.png" alt="National Archives of Nepal" height={100} width={100} />
+            <Image src="/img/nepal_logo.png" alt="National Archives of Nepal" height={120} width={120} />
             <p className="m-2 text-green-800">National Archives</p>
           </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-around">
           <div className="flex flex-col items-center">
-            <Image src="/img/ntb.jpg" alt="Nepal Tourism Board" height={100} width={100} />
-            <p className="m-2 text-green-800">Nepal Tourism Board</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <Image src="/img/kgmw6.png" alt="Kageshwori Manohara-6" height={130} width={130} />
+            <Image src="/img/kgmw6.png" alt="Kageshwori Manohara-6" height={120} width={130} />
             <p className="m-2 text-green-800">Kageshwori Manohara-6</p>
           </div>
           <div className="flex flex-col items-center">
