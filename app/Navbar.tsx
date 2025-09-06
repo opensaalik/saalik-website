@@ -87,8 +87,8 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
                 <Link className={`hover:text-[#63c963] ${path == '/about' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/about">
                   About
                 </Link>
-                <Link className={`hover:text-[#63c963] ${path == '/myths' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/myths">
-                  Myths
+                <Link className={`hover:text-[#63c963] ${path == '/guides' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/guides">
+                  Guides
                 </Link>
                 <Link className={`hover:text-[#63c963] ${path == '/initiatives' ? "text-[#63c963] font-semibold" : ""} px-5 py-2 rounded-xl text-sm font-medium`} href="/initiatives">
                   Initiatives
@@ -108,8 +108,8 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/">
               home
             </Link>
-            <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/myths">
-              myths
+            <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/guides">
+              guides
             </Link>
             <Link className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/initiatives">
               initiatives
