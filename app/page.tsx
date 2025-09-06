@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Navbar className="text-white" />
-      <div className="h-lvh">
+      <div className="h-[75vh]">
         <div className="bg-[url('/img/sculpture.jpg')] relative bg-cover h-full w-full">
           <div className="text-white absolute bottom-12 right-24">
             <Button name="Get Started" href="/about" className="text-white" />
@@ -149,15 +149,15 @@ export default function Home() {
         <Title text="Supported By" />
         <div className="flex flex-col md:flex-row items-center justify-around">
           <div className="flex flex-col items-center">
-            <Image src="/img/nepal_logo.png" alt="Department of Archeology" height={100} width={100} />
+            <Image src="/img/nepal_logo.png" alt="Department of Archeology" height={120} width={120} />
             <p className="m-2 text-green-800">Department of Archeology </p>
           </div>
           <div className="flex flex-col items-center">
-            <Image src="/img/nepal_logo.png" alt="National Archives of Nepal" height={100} width={100} />
+            <Image src="/img/nepal_logo.png" alt="National Archives of Nepal" height={120} width={120} />
             <p className="m-2 text-green-800">National Archives</p>
           </div>
           <div className="flex flex-col items-center">
-            <Image src="/img/kgmw6.png" alt="Kageshwori Manohara-6" height={100} width={100} />
+            <Image src="/img/kgmw6.png" alt="Kageshwori Manohara-6" height={120} width={130} />
             <p className="m-2 text-green-800">Kageshwori Manohara-6</p>
           </div>
           <div className="flex flex-col items-center">
