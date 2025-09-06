@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-// import vercel from "/public/saalik500.png";
-// import bg from "/public/sculpture.jpg";
-// import Link from "next/link";
 import Navbar from "./Navbar";
 import Button from "./Button";
 import Title from "./Title";
